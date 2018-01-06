@@ -13,7 +13,13 @@
     "react-scripts": "1.0.17"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,scss,css}": [
+    "src/**/*.{js,jsx,json}": [
+      "eslint --fix",
+      "prettier --config .prettierrc --write",
+      "git add"
+    ],
+    "src/**/*.{scss,css}": [
+      "stylelint --config=.stylelintrc --fix",
       "prettier --config .prettierrc --write",
       "git add"
     ]
@@ -25,7 +31,11 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test:lint:js": "eslint --ext=js --ext=jsx .",
+    "test:lint:scss": "stylelint --config=.stylelintrc '**/*.scss'",
+    "test:lint": "run-s test:lint:**",
+    "test:unit": "react-scripts test --env=jsdom",
+    "test": "run-s test:**",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -35,6 +45,8 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.4.0",
-    "eslint-plugin-react": "^7.5.1"
+    "eslint-plugin-react": "^7.5.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0"
   }
 }
