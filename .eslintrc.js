@@ -1,24 +1,24 @@
 module.exports = {
-  'env': {
+  env: {
     'browser': true,
     'jest': true,
     'es6': true,
     'node': true,
   },
-  'extends': [
+  extends: [
     'airbnb',
     'prettier',
   ],
-  'plugins': [
+  plugins: [
     'prettier',
   ],
-  'rules': {
+  rules: {
     'prettier/prettier': ['error', {
       'singleQuote': true,
       'trailingComma': 'es5'
     }],
   },
-  'parserOptions': {
+  parserOptions: {
     'ecmaFeatures': {
       'jsx': true,
     }
