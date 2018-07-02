@@ -9,7 +9,7 @@
     "prettier": "^1.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "^1.1.4"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [
@@ -53,7 +53,7 @@
     "url": "git+https://github.com/tsamaya/react-bootstrap.git"
   },
   "bugs": {
-     "url": "https://github.com/tsamaya/react-bootstrap/issues"
-   },
-   "homepage": "https://github.com/tsamaya/react-bootstrap#readme"
- }
+    "url": "https://github.com/tsamaya/react-bootstrap/issues"
+  },
+  "homepage": "https://github.com/tsamaya/react-bootstrap#readme"
+}
